@@ -1,45 +1,54 @@
 import React from 'react';
+import { Github, Slack, Instagram } from 'react-bootstrap-icons';
 import styles from './Footer.module.css';
 import Link from 'next/link';
 
 function Footer() {
-    return (
-        <footer className={styles.footer}>
-            <div className={styles.wraper}>
-                <div className={styles.madeMember}>
-                    <div className={styles.endlessCreation}>
-                        Endless Creation
-                    </div>
-                    <div className={styles.designedby}>
-                        Designed by&nbsp;&nbsp; 강영훈&nbsp; 김경태&nbsp; 박진홍
-                    </div>
-                    <div className={styles.copyright}>
-                        Copyright ⓒ Endless Creation 2024
-                    </div>
-                </div>
-                <div className={styles.contact}>
-                    <div className={styles.seoultechMark}>
-                        <img src="/seoultech.png" className={styles.seoultech} alt="seoultech"></img>
-                    </div>
-                    <b>Contact Us</b>
-                    <div className={styles.contactImageContainer}>
-                        <Link href="https://misty-wildcat-563.notion.site/Endless-Creation-34-8c608f05fa4941b38e9222bab05067cc" target="_blank" rel="noopener noreferrer">
-                            <img src="/notion.png" alt="notion" className={styles.contactImage} />
-                        </Link>
-                        <Link href="https://endlesscreation.slack.com" target="_blank" rel="noopener noreferrer">
-                            <img src="/slack.png" alt="slack" className={styles.contactImage} />
-                        </Link>
-                        <Link href="https://github.com/Endless-Creation-Official" target="_blank" rel="noopener noreferrer">
-                            <img src="/github.png" alt="github" className={styles.contactImage} />
-                        </Link>
-                        <Link href="https://www.instagram.com/endless__creation?igsh=d3N4NHJoa3hiYm9o" target="_blank" rel="noopener noreferrer">
-                            <img src="/instagram.png" alt="instagram" className={styles.contactImage} />
-                        </Link>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    );
+  return (
+    <div className="container my-5">
+      <footer className="bg-light text-center text-white">
+        <div className="container p-4 pb-0" style={{ backgroundColor: '#f1f1f1' }}>
+          <section className="mb-4">
+            <a
+              className="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="https://misty-wildcat-563.notion.site/Endless-Creation-34-8c608f05fa4941b38e9222bab05067cc"
+              role="button"
+              data-mdb-ripple-color="dark"
+            >
+              notion
+            </a>
+            <a
+              className="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="https://endlesscreation.slack.com"
+              role="button"
+              data-mdb-ripple-init
+            >
+              <Slack />
+            </a>
+            <a
+              className="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="https://github.com/Endless-Creation-Official"
+              role="button"
+              data-mdb-ripple-color="dark"
+            >
+              <Github />
+            </a>
+            <a
+              className="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="https://www.instagram.com/endless__creation?igsh=d3N4NHJoa3hiYm9o"
+              role="button"
+              data-mdb-ripple-color="dark"
+            >
+              <Instagram />
+            </a>
+          </section>
+        </div>
+        <div className="text-center text-dark p-3" style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
+          Copyright ⓒ Endless Creation 2024
+        </div>
+      </footer >
+    </div >
+  );
 }
 
 export default Footer;
