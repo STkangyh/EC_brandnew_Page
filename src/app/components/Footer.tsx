@@ -7,16 +7,8 @@ function Footer() {
   return (
     <div className="container my-5">
       <footer className="bg-light text-center text-white">
-        <div className="container p-4 pb-0" style={{ backgroundColor: '#f1f1f1' }}>
-          <section className="mb-4">
-            <a
-              className="btn btn-link btn-floating btn-lg text-dark m-1"
-              href="https://misty-wildcat-563.notion.site/Endless-Creation-34-8c608f05fa4941b38e9222bab05067cc"
-              role="button"
-              data-mdb-ripple-color="dark"
-            >
-              notion
-            </a>
+        <div className="container p-3 pb-0" style={{ backgroundColor: '#f1f1f1' }}>
+          <section className="mb-3">
             <a
               className="btn btn-link btn-floating btn-lg text-dark m-1"
               href="https://endlesscreation.slack.com"
@@ -32,6 +24,14 @@ function Footer() {
               data-mdb-ripple-color="dark"
             >
               <Github />
+            </a>
+            <a
+              className="btn btn-link btn-floating btn-lg text-dark m-1 text-decoration-none"
+              href="https://misty-wildcat-563.notion.site/Endless-Creation-34-8c608f05fa4941b38e9222bab05067cc"
+              role="button"
+              data-mdb-ripple-color="dark"
+            >
+              Notion
             </a>
             <a
               className="btn btn-link btn-floating btn-lg text-dark m-1"
