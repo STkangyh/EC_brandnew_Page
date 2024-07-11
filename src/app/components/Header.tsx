@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import styles from './Header.module.css';
+import React from 'react';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 
 const navigationLinks: {
   label: string,
@@ -14,21 +13,34 @@ const navigationLinks: {
 
 export default function Header() {
   return (
-    <header className={styles.headerContainer}>
-      <Link href="/">
-        <img src="./ECmark.png" alt="EC mark" className={styles.ECmark} />
-      </Link>
-      <nav>
-        <ul className={styles.navList}>
+    <Navbar
+      sticky="top"
+      bg="dark"
+      data-bs-theme="light"
+      className="bg-body-tertiary"
+      collapseOnSelect expand="sm"
+    >
+      <Container>
+        <Navbar.Brand href="/">
+          <img
+            src="./ECmark.png"
+            alt="EC mark"
+            className="EC-mark"
+          />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
           {navigationLinks.map(({ label, link }) => (
-            <li key={label}>
-              <Link href={link}>
-                {label}
-              </Link>
-            </li>
+            <Nav>
+              <Nav.Link href={link} className="p-3" key={label}>
+                <h4>
+                  {label}
+                </h4>
+              </Nav.Link>
+            </Nav>
           ))}
-        </ul>
-      </nav>
-    </header >
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   )
 }
